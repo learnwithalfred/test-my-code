@@ -24,8 +24,8 @@ const handleDelete = (index, array) => {
 
 const handleClearCompleted = (array) => {
   const newTodoItems = array.filter((item) => {
-    if (!item.complete) return true;
-    return null;
+    if (item.complete) return null;
+    return true;
   });
   return newTodoItems;
 };
